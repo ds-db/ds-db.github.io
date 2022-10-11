@@ -1,2 +1,2 @@
 # ds-db.github.io
-DS-DB wesite
+DS-DB website
