@@ -1,4 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DS-DB | Home Page</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <p>You should be automatically redirected to the DS-DB website in <span id="seconds">7</span> seconds. If not, please click <a href='https://sites.google.com/view/ds-db/'>here</a>.
+</p>
+  <script>
+    // Countdown timer for redirecting to another URL after several seconds
 
+var seconds = 7; // seconds for HTML
+var foo; // variable for clearInterval() function
+
+function redirect() {
+    document.location.href = 'https://sites.google.com/view/ds-db/';
+}
+
+function updateSecs() {
+    document.getElementById("seconds").innerHTML = seconds;
+    seconds--;
+    if (seconds == -1) {
+        clearInterval(foo);
+        redirect();
+    }
+}
+
+function countdownTimer() {
+    foo = setInterval(function () {
+        updateSecs()
+    }, 1000);
+}
+
+countdownTimer();
+  </script>
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,3 +105,4 @@ body {
   <p>This site is currently under construction, please join our Discord server for updates: <a href="https://discord.gg/TMQDWqj6Zs"></p>
 </body>
 </html>
+-->
